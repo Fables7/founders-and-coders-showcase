@@ -1,32 +1,233 @@
 /* CSS styles */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #001220;
+  margin: 0;
+  padding: 20px;
+
+  background-image: url("public/layered-waves2.svg");
+  aspect-ratio: 960/300;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+body p {
+  color: white;
+}
+
+main {
+  max-width: 1700px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.bgwave {
+  background-image: url("public/layered-waves2.svg");
+  width: "100%";
+  height: "100vh";
+  aspect-ratio: 960/300;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: absolute; */
+  background-position: center;
+}
+
+.img-hello {
+  width: 100%;
+  height: 100%;
+  /* width: 800px; */
+  max-height: 800px;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+header h1 {
+  color: white;
+  font-size: 3.75rem;
+  margin: 0;
+  line-height: 1;
+}
+
+header h2 {
+  color: white;
+  font-size: 1.875rem;
+  font-weight: 100;
+  line-height: 2.25rem;
+  margin: 0;
+}
+
+.title-container {
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Bouncing arrow */
+.arrow-container {
+  position: absolute;
+  bottom: 5%;
+}
+
+.arrow-circle {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #919191;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* fade in */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  
-  h1 {
-    color: #333;
-    text-align: center;
+  100% {
+    opacity: 1;
   }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.animate-fade-in {
+  animation: fade-in 2s ease-out;
+}
+
+@keyframes fade-in-up {
+  0% {
+      opacity: 0;
+      transform: translate3d(0,60px,0);
   }
-  
-  .button {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+  100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
   }
-  
+}
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+@keyframes fade-in-down {
+  0% {
+      opacity: 0;
+      transform: translate3d(0,-60px,0);
+  }
+  100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+  }
+}
+.animate-fade-in-down {
+  animation: fade-in-down 1s ease-out;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Profile Picture */
+
+.profile {
+  width: 24rem;
+  height: 24rem;
+  min-width: 24rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* About me container */
+.about-me {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left: 2.5rem;
+  margin-bottom: 8rem;
+}
+
+.about-me p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.about-me div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Skills logos */
+
+.skill-logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.skills-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.thin-h1 {
+  font-weight: 100;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  header,
+  .about-me {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1700px;
+  }
+
+  .profile {
+    margin-right: 2.5rem;
+  }
+}

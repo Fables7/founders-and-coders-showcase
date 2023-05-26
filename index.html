@@ -6,13 +6,44 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Website Showcase</h1>
-      <p>This is a sample HTML page styled with CSS.</p>
-
-      <button class="button" onclick="showMessage()">Click me</button>
-
-      <p id="message"></p>
+    <div class="main">
+      <header>
+        <img
+          src="public/programmingillu.svg"
+          class="img-hello animate-fade-in-up"
+        />
+        <div class="title-container animate-fade-in-down">
+          <h2>Developer</h2>
+          <h1>Fabien Lestrat</h1>
+        </div>
+        <div class="arrow-container animate-fade-in">
+          <div class="arrow-circle animate-bounce">
+            <img src="public/arrow-down-solid.svg" class="arrow" />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="about-me">
+          <img src="public/profilepic.png" class="profile" />
+          <div class="">
+            <h1>About Me</h1>
+            <p>
+              My Name is Fabien Lestrat, as a skilled front-end developer with a
+              strong foundation in JavaScript, I have developed a keen eye for
+              design and user experience. I have confidence in my ability to
+              produce well-designed, user-friendly web apps that meet and
+              surpass client expectations. Although concentrating mostly on
+              front-end programming, I have taken courses and worked on projects
+              to improve my back-end development abilities using
+              Node.js,vMongoDB, and Express.js.
+            </p>
+          </div>
+        </div>
+        <h1 class="thing-h1">Frontend Technology</h1>
+        <div class="skills-container" id="frontend"></div>
+        <h1>Other</h1>
+        <div class="skills-container" id="backend"></div>
+      </main>
     </div>
   </body>
 </html>
