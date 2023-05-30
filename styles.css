@@ -205,6 +205,11 @@ header h2 {
   height: 300px;
 }
 
+.mern-logo {
+  object-fit: cover;
+  height: 200px;
+}
+
 /* Why web developing */
 .img-why {
   width: 500px;
