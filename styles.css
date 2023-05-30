@@ -205,6 +205,18 @@ header h2 {
   height: 300px;
 }
 
+.right {
+  margin-right: 3rem;
+}
+
+.left {
+  margin-left: 3rem;
+}
+
+.bottom {
+  margin-bottom: 5rem;
+}
+
 .mern-logo {
   object-fit: cover;
   height: 200px;
