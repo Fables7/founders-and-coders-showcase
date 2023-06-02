@@ -18,6 +18,7 @@ body {
   align-items: center;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+  overflow-x: hidden;
 }
 
 .bgwave {
@@ -38,6 +39,8 @@ body p {
 
 main {
   max-width: 1700px;
+  width: 100vw;
+  /* border: 1px solid red; */
 }
 
 h1 {
@@ -49,15 +52,15 @@ h1 {
 }
 
 .img-hello {
-  width: 100%;
-  height: 100%;
-  max-height: 800px;
-  z-index: 100;
+  width: 70%;
+  height: 50%;
+  max-height: 700px;
+  z-index: 1;
 }
 
 header {
   display: flex;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   flex-direction: row;
   flex-direction: column;
@@ -258,12 +261,18 @@ header h2 {
 
 /* media queries */
 
-@media (min-width: 768px) {
+@media (min-width: 1219px) {
   header,
   .about-me {
     flex-direction: row;
     justify-content: space-around;
     max-width: 1700px;
+  }
+
+  .img-hello {
+    width: 100%;
+    height: 100%;
+    max-height: 700px;
   }
 
   .profile {
