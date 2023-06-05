@@ -49,6 +49,11 @@ h1 {
   font-size: 3rem;
   margin: 0;
   line-height: 1;
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
 }
 
 .img-hello {
