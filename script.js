@@ -18,8 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
     { src: "public/mongodb-logo.svg", alt: "mongodb logo" },
   ];
 
-  const container = document.getElementById("frontend");
-  const otherContainer = document.getElementById("backend");
+  const frontendContainers = document.querySelectorAll(
+    ".logos-slide-left.frontend"
+  );
+  const backendContainers = document.querySelectorAll(
+    ".logos-slide-right.backend"
+  );
 
   for (let i = 0; i < logos.length; i++) {
     const img = document.createElement("img");
@@ -30,10 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     img.classList.add("skill-logo");
 
     if (i < 7) {
-      container.appendChild(img);
+      frontendContainers.forEach((container) => {
+        container.appendChild(img.cloneNode(true));
+      });
     } else {
-      otherContainer.appendChild(img);
+      backendContainers.forEach((container) => {
+        container.appendChild(img.cloneNode(true));
+      });
     }
   }
 });
-

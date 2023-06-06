@@ -323,10 +323,19 @@ header h2 {
   transform: translateX(96%);
 }
 
-.card .content {
+.content-left {
+  background: linear-gradient(-45deg, #4124c7 0%, #69e7fa 100%);
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.content-right {
+  background: linear-gradient(-45deg, #69e7fa 0%, #4124c7 100%);
   padding-left: 60px;
   padding-right: 60px;
+}
 
+.card .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -338,7 +347,7 @@ header h2 {
   justify-content: center;
   text-align: left;
   gap: 10px;
-  background: linear-gradient(-45deg, #69e7fa 0%, #4124c7 100%);
+
   color: #e8e8e8;
   /* padding: 40px; */
   line-height: 1.5;
@@ -401,4 +410,73 @@ header h2 {
   .profile {
     margin-right: 2.5rem;
   }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+.logos-frontend {
+  width: 100%;
+  max-width: 1500px;
+}
+
+.logos-backend {
+  width: 100%;
+  max-width: 900px;
+}
+
+.sliding-logos {
+  overflow: hidden;
+  border: 1px solid red;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+}
+.sliding-logos:before,
+.sliding-logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.sliding-logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #001220);
+}
+.sliding-logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #001220);
+}
+
+.logos-frontend:hover .logos-slide-left {
+  animation-play-state: paused;
+}
+.logos-backend:hover .logos-slide-right {
+  animation-play-state: paused;
+}
+
+.logos-slide-left {
+  display: inline-block;
+  animation: 15s slide-left infinite linear;
+}
+.logos-slide-right {
+  display: inline-block;
+  animation: 15s slide-right infinite linear;
 }
