@@ -478,9 +478,22 @@ header h2 {
   }
 }
 
-@media (min-width: 1219px) and (max-width: 1470px) {
+@media (max-width: 1404px) {
   .card-container {
     height: 500px;
+  }
+
+  /* .logos {
+    display: none;
+  } */
+}
+@media (max-width: 1208px) {
+  .logos {
+    display: none;
+  }
+
+  .mern-logo {
+    display: none;
   }
 }
 
