@@ -463,6 +463,10 @@ header h2 {
   .card-container {
     height: 500px;
   }
+  .img-why {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 @media (max-width: 1208px) {
   .logos {
