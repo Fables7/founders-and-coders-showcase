@@ -5,14 +5,6 @@ body {
   background-color: #001220;
   margin: 0;
   padding: 0;
-  /* padding: 20px; */
-
-  /* background-image: url("public/layered-waves2.svg");
-  aspect-ratio: 960/300;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,7 +202,6 @@ header h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 5rem;
 }
 
 /* logos img */
@@ -284,15 +275,18 @@ header h2 {
   position: relative;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* border: 1px solid #fff; */
+  border: 1px solid #fff;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  position: relative;
+  /* position: relative; */
+  border: 1px solid #fff;
 }
 
 .card .front-content {
@@ -342,6 +336,7 @@ header h2 {
   left: 0;
   width: 100%;
   height: 100%;
+  border: 1px solid #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -374,43 +369,6 @@ header h2 {
 
 .card:hover .front-content p {
   opacity: 0;
-}
-
-/* media queries */
-
-@media (min-width: 1219px) {
-  header,
-  .about-me {
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 1700px;
-  }
-  .about-me div {
-    margin-bottom: 0;
-  }
-
-  .profile {
-    margin-bottom: 0;
-  }
-
-  .img-hello {
-    width: 100%;
-    height: 100%;
-    max-height: 700px;
-  }
-
-  .img-why {
-    width: 500px;
-    height: 500px;
-  }
-
-  .why-div {
-    flex-direction: row;
-  }
-
-  .profile {
-    margin-right: 2.5rem;
-  }
 }
 
 @keyframes slide-left {
@@ -482,3 +440,48 @@ header h2 {
   display: inline-block;
   animation: 15s slide-right infinite linear;
 }
+
+/* media queries */
+
+@media (min-width: 1219px) {
+  header,
+  .about-me {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1700px;
+  }
+  .about-me div {
+    margin-bottom: 0;
+  }
+
+  .profile {
+    margin-bottom: 0;
+  }
+
+  .img-hello {
+    width: 100%;
+    height: 100%;
+    max-height: 700px;
+  }
+
+  .img-why {
+    width: 500px;
+    height: 500px;
+  }
+
+  .why-div {
+    flex-direction: row;
+  }
+
+  .profile {
+    margin-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1219px) and (max-width: 1470px) {
+  .card-container {
+    height: 500px;
+  }
+}
+
+/*  */
