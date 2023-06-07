@@ -290,7 +290,7 @@ header h2 {
 }
 
 .card .front-content p {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 700;
   line-height: 3;
   opacity: 1;
@@ -466,6 +466,16 @@ header h2 {
   .img-why {
     margin-top: 7rem;
     margin-bottom: 7rem;
+  }
+}
+@media (max-width: 900px) {
+  .card-container {
+    height: 600px;
+  }
+}
+@media (max-width: 800px) {
+  .card-container {
+    height: 700px;
   }
 }
 @media (max-width: 1208px) {
